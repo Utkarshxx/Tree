@@ -1,0 +1,21 @@
+Input: root = [1, 2, 3, 4, N, 10, 5, N, N, N, N, 6, 7]
+
+Output: 3
+Explanation: The longest path from the root(node 1) to a leaf node 6 with 3 edges. have to count longest number of edges//
+IMP*** In counting edges return -1 
+  IMP** In counting nodes return 0
+
+class Solution {
+ 
+    public int height(Node root) {
+    
+    
+        if(root==null){
+            return -1;
+        }
+        int left=height(root.left);
+        int right=height(root.right);
+        return Math.max(left,right)+1;
+        
+    }
+}
